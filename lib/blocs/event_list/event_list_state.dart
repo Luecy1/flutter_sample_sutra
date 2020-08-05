@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:flutter_sample_sutra/models/event.dart';
 import 'package:meta/meta.dart';
 
 @immutable
@@ -14,4 +15,15 @@ class EventListEmpty extends EventListState {
 class EventListInProgress extends EventListState {
   @override
   String toString() => 'EventListInProgress';
+}
+
+class EventListSuccess extends EventListState {
+  final Stream<List<Event>> eventList;
+
+  EventListSuccess({@required this.eventList})
+      : assert(eventList != null),
+        super([eventList]);
+
+  @override
+  String toString() => 'EventListSuccess';
 }
