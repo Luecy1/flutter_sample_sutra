@@ -57,7 +57,7 @@ class EventListScreen extends StatelessWidget {
                                 child: Image.network(
                                   event.imageUrl,
                                   fit: BoxFit.none,
-                                  height: 128,
+                                  height: 300,
                                 ),
                               )
                             ],
@@ -79,7 +79,7 @@ class EventListScreen extends StatelessWidget {
             );
           }
 
-          throw StateError('unreached here');
+          return Container();
         },
       ),
     );

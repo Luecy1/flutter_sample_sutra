@@ -11,8 +11,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primaryColor: Colors.indigo[900],
+        accentColor: Colors.pink[800],
+        brightness: Brightness.light,
       ),
       home: EventListScreen(),
     );
