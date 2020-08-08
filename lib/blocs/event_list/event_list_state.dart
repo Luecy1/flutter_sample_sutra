@@ -27,3 +27,8 @@ class EventListSuccess extends EventListState {
   @override
   String toString() => 'EventListSuccess';
 }
+
+class EventListFailure extends EventListState {
+  @override
+  String toString() => 'EventListInFailure';
+}
