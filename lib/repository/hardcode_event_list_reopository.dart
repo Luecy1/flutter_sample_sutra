@@ -1,7 +1,7 @@
 import 'package:flutter_sample_sutra/blocs/event_list/event_list_repository.dart';
 import 'package:flutter_sample_sutra/models/event.dart';
 
-class HardcordEventListRepository extends EventListRepository {
+class HardcodeEventListRepository extends EventListRepository {
   @override
   Stream<List<Event>> fetch() async* {
     yield [

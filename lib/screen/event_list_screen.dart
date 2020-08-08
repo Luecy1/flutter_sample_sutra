@@ -4,13 +4,13 @@ import 'package:flutter_sample_sutra/blocs/event_list/event_list_bloc.dart';
 import 'package:flutter_sample_sutra/blocs/event_list/event_list_event.dart';
 import 'package:flutter_sample_sutra/blocs/event_list/event_list_state.dart';
 import 'package:flutter_sample_sutra/models/event.dart';
-import 'package:flutter_sample_sutra/repository/hardcord_event_list_reopository.dart';
+import 'package:flutter_sample_sutra/repository/hardcode_event_list_reopository.dart';
 
 class EventListScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final eventListBloc = EventListBloc(
-      eventListRepository: HardcordEventListRepository(),
+      eventListRepository: HardcodeEventListRepository(),
     );
     eventListBloc.dispatch(EventListLoad());
 
