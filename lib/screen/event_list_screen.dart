@@ -79,7 +79,7 @@ class EventListScreen extends StatelessWidget {
             );
           }
 
-          return Container();
+          throw StateError('unreached here');
         },
       ),
     );

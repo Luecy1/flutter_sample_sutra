@@ -23,6 +23,7 @@ class EventListBloc extends Bloc<EventListEvent, EventListState> {
 
   Stream<EventListState> _mapEventListToState() async* {
     yield EventListInProgress();
+    await Future.delayed(new Duration(seconds: 3));
     yield EventListSuccess(eventList: _eventListRepository.fetch());
   }
 }
