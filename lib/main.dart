@@ -4,6 +4,7 @@ import 'package:flutter_sample_sutra/blocs/authentication/authentication_bloc.da
 import 'package:flutter_sample_sutra/blocs/authentication/authentication_event.dart';
 import 'package:flutter_sample_sutra/repository/hardcode_authentication_repository.dart';
 import 'package:flutter_sample_sutra/screen/event_list_screen.dart';
+import 'package:flutter_sample_sutra/screen/sign_in_screen.dart';
 import 'package:flutter_sample_sutra/screen/splash_screen.dart';
 
 import 'blocs/authentication/authentication_state.dart';
@@ -41,6 +42,9 @@ class MyApp extends StatelessWidget {
           }
           if (state is AuthenticationSuccess) {
             return EventListScreen();
+          }
+          if (state is AuthenticationFailure) {
+            return SignInScreen();
           }
           return Container();
         },
