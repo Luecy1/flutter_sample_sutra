@@ -17,6 +17,19 @@ class HardcodeAuthenticationRepository extends AuthenticationRepository {
 
   @override
   Future<bool> isSignedIn() async {
+//    Directory tempDir = await getTemporaryDirectory();
+//
+//    File signFile = File('${tempDir.path}/sign.txt');
+//
+//    return false;
+//
+//
+//    if (!await signFile.exists()) {
+//      await signFile.create();
+//      return false;
+//    }
+
+    // 固定でtrueを返す
     return true;
   }
 
